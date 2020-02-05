@@ -1,5 +1,8 @@
 # arr=list(map(int, input().split()))
-arr = [85, 86]
+arr = []
+for i in range(0, 9):
+    arr.append(int(input()))
+
 origin_arr = arr[:]
 arr.sort(reverse=True)
 
