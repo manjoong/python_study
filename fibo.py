@@ -1,5 +1,9 @@
 
 answer = 0
+def fibo()
+
+fibo(0) = 0
+fibo(1) = 1
 
 
 def fibo(a):
@@ -8,6 +12,8 @@ def fibo(a):
     
     elif a == 1:
         return int(1)
+    
+    
 
     return(answer + fibo(a-1))
 
