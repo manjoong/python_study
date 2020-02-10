@@ -1,20 +1,17 @@
 
-answer = 0
-def fibo()
+n = 6
 
-fibo(0) = 0
-fibo(1) = 1
+f0 = 0
+f1 = 1
 
 
-def fibo(a):
-    if a == 0:
-        return int(0)
-    
-    elif a == 1:
-        return int(1)
-    
-    
+for i in range(0, ((n/2))):
+    f0 = f1+f0
+    print(f1, f0)
+    f1 = f1+f0
+    print(f1, f0)
 
-    return(answer + fibo(a-1))
-
-print(answer)
+if n%2 == 0:
+    print f0
+else:
+    print f1
