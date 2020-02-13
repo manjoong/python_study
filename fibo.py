@@ -1,16 +1,10 @@
 
 n = 10
 
-f0 = 0
-f1 = 1
+fibo = [ 0 for _ in range(0, n+1) ]
+fibo[1] = 1
 
-if n > 1:
-    for i in range(0, ((n//2))):
-        f0 = f1+f0
-        f1 = f1+f0
+for i in range(2, n+1):
+    fibo[i] = fibo[i-1] + fibo[i-2]
 
-
-if n%2 == 0:
-    print f0
-else:
-    print f1
+print(fibo[n])
