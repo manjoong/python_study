@@ -31,7 +31,11 @@ def empty():
         print 1
 
 def top():
-    print(arr[0])
+    if len(arr) == 0:
+        print(-1)
+    else:
+        print(arr[0])
+
 
     
 for i in range(0, num): 
