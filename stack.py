@@ -6,8 +6,8 @@
 # for i in range(0, num):
 #     command[i] = input()
 
-num = 9
-command = ["push 5", "push 4", "top", "pop", "size", "empty", "top", "pop", "pop"]
+num = 14
+command = ["push 1", "push 2", "top", "size","empty","pop","pop","pop","size","empty","pop","push 3","empty","top"]
 
 arr = []
 
@@ -18,23 +18,23 @@ def pop():
     if len(arr) == 0:
         print(-1)
     else:
-        print(arr[0])
-        arr.pop(0)
+        print(arr[len(arr)-1])
+        arr.pop()
 
 def size():
     print(len(arr))
 
 def empty():
     if len(arr)>0:
-        print 0
+        print(0)
     else:
-        print 1
+        print(1)
 
 def top():
     if len(arr) == 0:
         print(-1)
     else:
-        print(arr[0])
+        print(arr[len(arr)-1])
 
 
     
