@@ -13,10 +13,21 @@ command = ["back"]
 
 arr = []
 
-def push(x):
+def push_front(x):
     arr.append(x)
 
-def pop():
+
+def push_back(x):
+    arr.append(x)
+
+def pop_front():
+    if len(arr) == 0:
+        print(-1)
+    else:
+        print(arr[0])
+        del arr[0]
+
+def pop_back():
     if len(arr) == 0:
         print(-1)
     else:
