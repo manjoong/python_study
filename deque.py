@@ -7,14 +7,14 @@ size: 덱에 들어있는 정수의 개수를 출력한다.
 empty: 덱이 비어있으면 1을, 아니면 0을 출력한다.
 front: 덱의 가장 앞에 있는 정수를 출력한다. 만약 덱에 들어있는 정수가 없는 경우에는 -1을 출력한다.
 back: 덱의 가장 뒤에 있는 정수를 출력한다. 만약 덱에 들어있는 정수가 없는 경우에는 -1을 출력한다.
-
+앞-->[1, 2, 3, 4] <-- 뒤
 num = 1
 command = ["back"]
 
 arr = []
 
 def push_front(x):
-    arr.append(x)
+    arr.insert(x)
 
 
 def push_back(x):
@@ -31,8 +31,8 @@ def pop_back():
     if len(arr) == 0:
         print(-1)
     else:
-        print(arr[0])
-        del arr[0]
+        print(arr[len(arr)-1])
+        del arr[len(arr)-1]
 
 def size():
     print(len(arr))
