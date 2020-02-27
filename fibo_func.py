@@ -1,10 +1,16 @@
-n = int(input())
-arr = [0 for _ in range(0, n+1)]
-arr[1] = 1
-arr_0 = 0
-arr_1 = 1
+# n = int(input())
+# arr_0 = 0
+# arr_1 = 0
 
-for i in range(2, n+1):
-    arr[i] = arr[i-1] + arr[i-2]
+def fibo(x):
+    if x == 0:
+        # arr_0 = arr_0 + 1
+        return 0
+    elif x == 1:
+        # arr_1 = arr_1 + 1
+        return 1
+    else:
+        return fibo(x-1) + fibo(x-2)
 
-print(arr[n])    
+
+print(fibo(4))    
