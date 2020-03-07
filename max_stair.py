@@ -20,7 +20,7 @@ for i in range(3, n):
 
 
 
-for i in print(0, n):
+for i in range(0, n):
     print(arr[i])
 
 
