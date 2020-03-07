@@ -2,26 +2,25 @@ n = int(input())
 
 arr = [0 for _ in range(0, n)]
 
-arr[0] = int(input())
-arr[1] = arr[0]+ int(input())
+first = int(input())
+arr[0] = first
+second = int(input())
+arr[1] = arr[0] + second
+third = int(input())
+arr[2] = max([first, second])+third
+pre = third
 
-duplicate=0
 
-for i in range(2, n):
+
+for i in range(3, n):
 
     new = int(input())
+    arr[i] = max([(new+pre+arr[i-3]),(new+arr[i-2])])
+    pre = new
 
-    if duplicate != 1:
-        arr[i] = max([(arr[i-1]+new), (arr[i-2]+new)])
-    else:
-        arr[i] = arr[i-2]+new
-        duplicate=0
 
-    if arr[i] == arr[i-1]+new:
-        duplicate=1
 
-    
-
-print(arr[n-1])
+for i in print(0, n):
+    print(arr[i])
 
 
