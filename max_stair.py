@@ -1,26 +1,19 @@
 n = int(input())
 
-arr = [0 for _ in range(0, n)]
-
-first = int(input())
-arr[0] = first
-second = int(input())
-arr[1] = arr[0] + second
-third = int(input())
-arr[2] = max([first, second])+third
-pre = third
-
-
-
-for i in range(3, n):
-
-    new = int(input())
-    arr[i] = max([(new+pre+arr[i-3]),(new+arr[i-2])])
-    pre = new
-
-
-
+dp=[]
+arr=[]
 for i in range(0, n):
-    print(arr[i])
+    arr.append(int(input()))
+
+dp.append(arr[0])
+if n>=2:
+    dp.append(arr[0] + arr[1])
+if n >= 3:
+    dp.append(max(arr[0], arr[1])+arr[2])
+    for i in range(3, n):
+
+        dp.append(max((arr[i]+arr[i-1]+dp[i-3]), (arr[i]+dp[i-2])))
+
+print(dp[n-1])
 
 
