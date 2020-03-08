@@ -14,6 +14,4 @@ if n >= 3:
 
         dp.append(max((arr[i]+arr[i-1]+dp[i-3]), (arr[i]+dp[i-2])))
 
-print(dp(-1))
-
-
+print(max(dp))
