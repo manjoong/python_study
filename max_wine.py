@@ -15,3 +15,6 @@ if n >= 3:
         dp.append(max((arr[i]+arr[i-1]+dp[i-3]), (arr[i]+dp[i-2])))
 
 print(max(dp))
+
+#만약 10, 20, 0 0 0 030, 15라면?
+#너무 i-3, i-2에 매여 있었다..
