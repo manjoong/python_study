@@ -16,5 +16,4 @@ if n >= 3:
 
 print(max(dp))
 
-#만약 10, 20, 0 0 0 030, 15라면?
-#너무 i-3, i-2에 매여 있었다..
+#i don't know. i will see the answer
