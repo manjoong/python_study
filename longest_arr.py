@@ -1,27 +1,13 @@
 n = int(input())
-arr = [0 for _ in range(0, n)]
+dp = [0 for _ in range(0, n)]
 q = []
 
-q = list(map(int, input().split(" ")))
-# for i in range(0, n):
-#   q.append(int(input(" ")))
-
-arr[0] = q[0]
-if n>1:
-  count = 1
-else:
-  count = 0
-max = 0
+arr = list(map(int, input().split(" ")))
 
 
-for i in range(1, n):
-  arr[i] = q[i]-q[i-1]
-  # print("arr[i] : " + str(arr[i]))
-
-  if max < arr[i] :
-    max = arr[i]
-    # print("max : " +str(max))
-    count += 1
+for i in range(0, n):
+  for j in range(0, i):
+    if 
 
 print(count)
 
