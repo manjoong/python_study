@@ -14,12 +14,18 @@ for i in first_pole:
 
 print(first_dic)
 
-
+for i in range(0, len(first_dic)):
+    for j in range(0, i):
+        if first_dic[first_pole[i]]<second_pole[j]:
+            print(first_dic[first_pole[i]])
+            print("pre second = ", second_pole[j])
+            dp[i] = dp[i] + 1
+    
 
 
 print(first_pole)
 print(second_pole)
-
+print(dp)
 
 # "8"
 # "1 8"
