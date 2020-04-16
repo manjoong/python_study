@@ -1,4 +1,3 @@
-
 import heapq
 
 def heap_sort(nums):
@@ -20,63 +19,23 @@ def solution(people, limit):
     # print(people)
     # while(people):
     n=0
-    while(people):
-        # heap(people)
-        if len(people) ==1:
-            count=count + 1
-            break
-        else:
-            if people[0] > int(limit/2):
-                count = count + len(people)
-                print("굿")
-                people = []
-                break
-            else:      
-                if people[len(people)-2] + people[len(people)-1] <= limit:
-                    if len(people)%2 == 0:
-                        count = count + int(len(people)/2)
-                        people = []
-                    else:
-                        print(int(count/2))
-                        count = count + int(len(people)/2) + 1
-                        people = []
-                    break
-                
-                
-                if people[0] + people[1] > limit :
-                    count = count + len(people)
-                    people = []
-                    break
-
-
-                if people[0] + people[1] <= limit:         
-                    for i in range(1, len(people)):
-                        if people[0] + people[i] <= limit:
-                            # print(people[0], people[i])
-                            continue
-                        else:
-                            del people[i-1]
-                            del people[0]
-                            count = count + 1
-                            break
-                
-#                 if people[0] + people[1] <= limit:         
-#                     for i in range(len(people)-1, 0, -1):
-#                         # print(people[0], people[i])
-
-#                         if people[0] + people[i] <= limit:
-#                             # print(people[0], people[i])
-
-#                             people.pop(i)
-#                             people.pop(0)
-#                             count = count + 1
-#                             break
-
-            
-                
-        # n = n+1
-        
+    light_people= 0
+    heavy_people= len(people)-1
     
+    while(light_people<heavy_people):
+        
+        if people[light_people] + people[heavy_people]<=limit:
+            # print(light_people, heavy_people)
+            heavy_people = heavy_people - 1
+            light_people = light_people + 1
+            count = count + 1
+        else:
+            # print(light_people, heavy_people)
+            heavy_people = heavy_people - 1
+            count = count + 1
+            
+    if light_people==heavy_people:
+        count = count + 1
     
     answer = count
     return answer
