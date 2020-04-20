@@ -13,24 +13,13 @@ first_dic = {}
 for i in first_pole:
     first_dic[i] = second_pole[first_pole.index(i)]
 
-print(first_dic)
-
-sort_dict = sorted(first_dic.items())
-print(sort_dict)
 
 first_pole = []
 second_pole = []
-
-for key, value in sort_dict:
+for key, value in first_dic.items():
     first_pole.append(key)
     second_pole.append(value)
-
-
-# for key, value in first_dic.items():
-#     first_pole.append(key)
-#     second_pole.append(value)
-# print(first_pole, second_pole)
-
+    
 temp =0
 max_value = 0
 dp[0] = 1
@@ -50,7 +39,10 @@ for i in range(0, len(second_pole)):
 print(len(second_pole)-max(dp))
     
 
-
+# print(count)
+# print(first_dic)
+# print(first_pole)
+# print(second_pole)
 
 
 
