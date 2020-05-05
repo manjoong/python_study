@@ -6,9 +6,9 @@ array = []
 
 
 for i in range(0, n):
-  array.append(string.split(" ")[i])
+  array.append(int(string.split(" ")[i]))
 
-array = list(map(int, array))
+# array = list(map(int, array))
 # dp[0] = array[0]
 dp = array[0]
 max_v = array[0]
