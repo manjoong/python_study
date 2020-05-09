@@ -17,7 +17,8 @@ dp = []
 dp = [values[0]]
 
 for i in range(1, count):
-    if weight[]
+    if sum_weight > can_weight:
+         
 
 print(weight)
 print(values)
