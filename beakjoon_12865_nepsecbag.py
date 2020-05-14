@@ -19,6 +19,7 @@ dp = [ [0 for _ in range(0, can_weight)] for _ in range(0, count)]
 print(weight)
 print(values)
 print(dp)
+#dp[i][s]는 배낭 크기가 s일 때, i개의 물건을 넣었을 때, 가능한 최대 가치를 의미합니다.
 
 
 # "4 7"
